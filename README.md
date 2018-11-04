@@ -1,53 +1,29 @@
-# Render
+# Simple Graph render
 
-## Граф визуальный прекрасный I
+## What is it?
+It is just yet another useless graph render. The reason why it was developed only one -
+it is the task from WG Forge (for more details go to `task.md` file).
 
-Необходимо разработать программу, которая визуализирует граф представленный в формате JSON
-```json
-{
-    "idx": 1,
-    "lines": [
-        {
-            "idx": 192,
-            "length": 1,
-            "points": [
-                112,
-                107
-            ]
-        },
-        {
-            "idx": 193,
-            "length": 2,
-            "points": [
-                101,
-                102
-            ]
-        },
-        ...
-    ],
-    "name": "map01",
-    "points": [
-        {
-            "idx": 101,
-            "post_idx": 13
-        },
-        {
-            "idx": 102,
-            "post_idx": null
-        },
-        ...
-    ]
-}
-```
-* points - вершины графа;
-* lines - рёбра графа;
-* length - длинна ребра;
-* idx - уникальный индекс для линии.
-Каждую линию образует 2 точки (points).
-Остальную информацию пока можно игнорировать, но в скором будущем она вам возможно понадобится.
+## Requirements for build environment
+* C++17-compatible compiler (tested on Clang-7.0)
+* Conan package manager
+* CMake
 
-Для тестирования вашей программы имеются 2 графа: [big_graph](big_graph.json) и [small_graph](small_graph.json).
-Также необходимо самостоятельно создать ещё минимум 2 графа в заданном формате.
+## How to build
+* Clone sources
+* Go to the already cloned directory
+* Run conan install .
+* Run `cmake .` . Of course you can use another generator - it will change only the next step.
+* Run `make -j ${NUM}` 
 
-Обязательно продумайте наперёд архитектуру вашей программы, чтобы она была открыта для добавления новой функциональности.
+## How to use
+At first you need to install `graphviz` package. How to do it? See instructions for your OS
+(e.g. on UNIX-based OS you can use your favourite package manager).
 
+The program takes one parameter - path to the graph. A graph must be presented as valid JSON
+file. As output you (if you are lucky :) will get a `dot` file. You can print it with `grapviz`
+
+## FAQ
+* Your program does not work - open an issue on GitHub and provide me a brief description of
+your problem case and test data.
+* Do you have any roadmap? - No, I haven't. Wargaming has :)
