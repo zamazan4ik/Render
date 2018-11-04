@@ -4,4 +4,4 @@ jsonformoderncpp/3.3.0@vthiery/stable
 spdlog/1.1.0@bincrafters/stable
 
 [generators]
-cmakegst
+cmake
