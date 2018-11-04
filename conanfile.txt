@@ -1,0 +1,7 @@
+[requires]
+boost/1.68.0@conan/stable
+jsonformoderncpp/3.3.0@vthiery/stable
+spdlog/1.1.0@bincrafters/stable
+
+[generators]
+cmakegst
