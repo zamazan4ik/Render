@@ -32,3 +32,5 @@ your problem case and test data.
 * Add CI support (Travis CI + Appveyor should be enough)
 * Add logging system support (Spdlog)
 * Try to use more advanced drawing techniques (should be investigated)
+* Add nicer command line support (Clara, docopt, etc.)
+* Unit-testing (possibly Catch2)
