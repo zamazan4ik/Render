@@ -27,3 +27,8 @@ file. As output you (if you are lucky :) will get a `dot` file. You can print it
 * Your program does not work - open an issue on GitHub and provide me a brief description of
 your problem case and test data.
 * Do you have any roadmap? - No, I haven't. Wargaming has :)
+
+## TODO
+* Add CI support (Travis CI + Appveyor should be enough)
+* Add logging system support (Spdlog)
+* Try to use more advanced drawing techniques (should be investigated)
