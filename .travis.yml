@@ -17,7 +17,7 @@ addons:
     - clang
     - libc++-dev
     - cmake
-    - pip
+    - python-pip
 
 script:
 - pip install conan
