@@ -1,5 +1,6 @@
 [requires]
 boost/1.68.0@conan/stable
+cli11/1.6.1@bincrafters/stable
 jsonformoderncpp/3.3.0@vthiery/stable
 spdlog/1.1.0@bincrafters/stable
 

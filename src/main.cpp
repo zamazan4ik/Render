@@ -1,3 +1,5 @@
+#include "CLI/CLI.hpp"
+
 #include <nlohmann/json.hpp>
 
 #include <boost/graph/adjacency_list.hpp>
@@ -46,26 +48,27 @@ int main(int argc, char* argv[])
 {
     try
     {
-        if (argc < 2)
-        {
-            // TODO: Add log support
-            std::cerr << "Please enter an input filename";
-            return 0;
-        }
+        CLI::App app{"Simple graph render"};
 
-        const auto jsonGraph = parseJsonFile(argv[1]);
+        std::string inputFilename, outputFilename;
+        app.add_option("-i,--input", inputFilename, "Input filename")->required();
+        app.add_option("-o,--output", outputFilename, "Output filename")->required();
+
+        CLI11_PARSE(app, argc, argv);
+
+        const auto jsonGraph = parseJsonFile(inputFilename);
 
         const auto graph = createGraph(jsonGraph);
 
-        std::ofstream dotfile("result.dot");
+        std::ofstream dotfile(outputFilename);
         boost::write_graphviz(dotfile, graph);
     }
-    catch(const std::exception& e)
+    catch (const std::exception& e)
     {
-        std::cerr << "An exception was thrown: " << e.what();
+        std::cerr << "[main]: An exception was thrown: " << e.what();
     }
-    catch(...)
+    catch (...)
     {
-        std::cerr << "Some unknown exception was thrown";
+        std::cerr << "[main]: Some unknown exception was thrown";
     }
 }
