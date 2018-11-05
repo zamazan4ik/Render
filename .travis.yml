@@ -1,4 +1,4 @@
-sudo: false
+sudo: true
 os: linux
 
 env:
@@ -20,6 +20,7 @@ addons:
     - python-pip
 
 script:
+- pip install --upgrade pip
 - pip install conan
 - conan install . --build missing
 - cmake -DCMAKE_BUILD_TYPE=Release
