@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/ZaMaZaN4iK/Render.svg?branch=master)](https://travis-ci.org/ZaMaZaN4iK/Render)
 # Simple Graph render
 
 ## What is it?
