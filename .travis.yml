@@ -20,8 +20,8 @@ addons:
     - python-pip
 
 script:
-- pip install --upgrade pip
-- pip install conan
+- sudo pip install --upgrade pip
+- sudo pip install conan
 - conan install . --build missing
 - cmake -DCMAKE_BUILD_TYPE=Release
 - VERBOSE=1 make -j2
