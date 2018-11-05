@@ -1,0 +1,22 @@
+image: Visual Studio 2017
+platform: x64
+
+PYTHON: "C:\\Python27"
+PYTHON_VERSION: "2.7.8"
+PYTHON_ARCH: "32"
+
+before_build:
+- pip.exe install conan --upgrade
+- conan install .
+- cmake . -DCMAKE_BUILD_TYPE=Release
+build_script:
+- cmake --build . --config Release
+after_build:
+
+before_test:
+test_script:
+after_test:
+
+on_success:
+on_failure:
+on_finish:
