@@ -22,7 +22,7 @@ addons:
 script:
 - sudo pip install --upgrade --force-reinstall pip==9.0.3
 - sudo pip install conan --disable-pip-version-check
-- conan install . --build missing
+- conan install . -s compiler=gcc -s compiler.version=7 -s compiler.libcxx=libstdc++11 --build missing
 - cmake -DCMAKE_BUILD_TYPE=Release
 - VERBOSE=1 make -j2
 
