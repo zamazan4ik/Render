@@ -1,3 +1,5 @@
+# Render
+
 [![Build Status](https://travis-ci.org/ZaMaZaN4iK/Render.svg?branch=master)](https://travis-ci.org/ZaMaZaN4iK/Render)
 # Simple Graph render
 
@@ -35,3 +37,11 @@ your problem case and test data.
 * Try to use more advanced drawing techniques (should be investigated)
 * Add nicer command line support (Clara, docopt, etc.)
 * Unit-testing (possibly Catch2)
+
+## Задания
+
+### Граф визуальный прекрасный I
+[Задание 1](tasks/task_1.md)
+
+### Клиент игровой великолепный II
+[Задание 2](tasks/task_2.md)
